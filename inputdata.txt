@@ -1,0 +1,9 @@
+outdoor sunny happy
+outdoor sunny happy wet
+outdoor sunny happy wet
+outdoor sunny sad dry
+outdoor sunny dry
+indoors sunny sad cold
+indoors rainy unhappy wet
+indoors rainy happy cold
+indoors sad cold
