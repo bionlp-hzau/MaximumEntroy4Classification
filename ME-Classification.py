@@ -56,10 +56,11 @@ class MaxEnt(object):
         #             ('outdoor', 'wet'): 4, ('indoors', 'cold'): 5, ('indoors', 'unhappy'): 6, 
         #             ('outdoor', 'happy'): 7, ('indoors', 'rainy'): 8, ('indoors', 'sunny'): 9, 
         #             ('indoors', 'wet'): 10, ('indoors', 'happy'): 11}))
-        self.w = [0.0]*len(self.feats)  #初始化权重
+        self.w = [0.0]*len(self.feats)  #初始化权重$\lambda_i$
         self.lastw = self.w
 
-    #计算每个特征权重的指数 exp \lambda $\sum_{i=1}^m \lambda_i$ f_i(\vec{x},y), given fixed x and y.
+    #计算出每个特征feats(label,f)对应的权重\lambda的指数 exp \lambda 
+    #$\sum_{i=1}^m \lambda_i$ f_i(\vec{x},y), given fixed x and y.
     def probwgt(self, features, label):     
         wgt = 0.0
         for f in features:
